@@ -19,8 +19,8 @@ public class PAC {
     private Long pacId;
 
     @ManyToOne
-    @JoinColumn(name = "cliente_id")
-    private Cliente cliente;
+    @JoinColumn(name = "cuenta_id")
+    private Cuenta cuenta;
 
     @OneToOne
     @JoinColumn(name = "producto_id")
