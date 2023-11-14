@@ -1,17 +1,12 @@
 package com.pacadmin.banchilechallenge.model;
 
 import java.util.Date;
-
-import jakarta.persistence.*;
 import org.springframework.format.annotation.DateTimeFormat;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
-@Table(name = "pac")
+@Table(name = "pacs")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -24,11 +19,11 @@ public class PAC {
     private Long pacId;
 
     @ManyToOne
-    @JoinColumn(name = "id_cliente")
+    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
     @OneToOne
-    @JoinColumn(name = "id_producto")
+    @JoinColumn(name = "producto_id")
     private Producto producto;
 
     @Column(name = "fecha")
@@ -36,5 +31,5 @@ public class PAC {
     private Date pacFecha;
 
     @Column(name = "monto")
-    private Integer pacMonto;
+    private Double pacMonto;
 }

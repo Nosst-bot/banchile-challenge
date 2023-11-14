@@ -1,29 +1,25 @@
 package com.pacadmin.banchilechallenge.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "cuentas")
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class Cuenta {
 
-    @Column(name = "id_cuenta")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCuenta;
+    @Column(name = "cuenta_id")
+    private Long cuentaId;
 
     @Column(name = "nombre_banco")
-    private String nombreBanco;
-
+    private String cuentaNombreBanco;
 
     @ManyToOne
-    @JoinColumn(name = "id_cliente")
+    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 }

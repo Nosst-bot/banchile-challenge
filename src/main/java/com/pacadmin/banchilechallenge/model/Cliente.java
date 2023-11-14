@@ -5,20 +5,20 @@ import lombok.*;
 
 @Entity
 @Table(name = "clientes")
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class Cliente {
 
-    @Column(name = "id_cliente")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCliente;
+    @Column(name = "cliente_id")
+    private Long clienteId;
 
     @Column(name = "rut")
-    private String rut;
+    private String clienteRut;
 
     @Column(name = "nombre")
-    private String nombre;
+    private String clienteNombre;
 }
