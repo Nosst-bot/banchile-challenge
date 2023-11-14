@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import com.pacadmin.banchilechallenge.model.Producto;
 
 @Repository
-public interface ProductoRepository extends JpaRepository<Producto,Long>{
+public interface ProductoRepository extends JpaRepository<Producto,Long> {
 }
