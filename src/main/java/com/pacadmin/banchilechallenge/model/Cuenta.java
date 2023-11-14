@@ -23,6 +23,7 @@ public class Cuenta {
     private String nombreBanco;
 
 
-    @Column(name = "id_cliente")
-    private Long idCliente;
+    @ManyToOne
+    @JoinColumn(name = "id_cliente")
+    private Cliente cliente;
 }
