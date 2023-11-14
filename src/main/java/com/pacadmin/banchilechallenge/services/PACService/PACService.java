@@ -1,5 +1,8 @@
 package com.pacadmin.banchilechallenge.services.PACService;
 
-public class PACService {
+import com.pacadmin.banchilechallenge.model.PAC;
+
+public interface PACService {
     
+    PAC getPACPorId(Long id);
 }
