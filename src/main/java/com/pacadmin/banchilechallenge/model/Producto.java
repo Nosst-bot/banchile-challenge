@@ -16,6 +16,6 @@ public class Producto {
     @Column(name = "producto_id")
     Long productoId;
 
-    @Column(name = "nombre")
+    @Column(name = "nombre", unique = true)
     String productoNombre;
 }
