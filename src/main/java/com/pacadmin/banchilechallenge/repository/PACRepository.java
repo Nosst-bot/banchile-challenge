@@ -18,8 +18,10 @@ public interface PACRepository extends JpaRepository<PAC,Long> {
             "INNER JOIN c.cliente cl " +
             "WHERE (:rut IS NULL OR cl.clienteRut = :rut) " +
             "AND (:dia IS NULL OR FUNCTION('DAY', pac.pacFecha) = :dia) " +
-            "AND (:nombreBanco IS NULL OR c.cuentaNombreBanco = :nombreBanco)" +
-            "AND (:nombreProducto IS NULL OR p.productoNombre = :nombreProducto)")
+            "AND (:nombreProducto IS NULL OR p.productoNombre = :nombreProducto) " +
+            "AND (:nombreBanco IS NULL OR c.cuentaNombreBanco = :nombreBanco) " +
+            "AND (:nombreCliente IS NULL OR cl.clienteNombre = :nombreCliente) " +
+            "AND (:pacId IS NULL OR pac.pacId = :pacId)")
+    List<Object[]> obtenerDatosConFiltros(String rut, Integer dia, String nombreProducto, String nombreBanco, String nombreCliente, Long pacId);
 
-    List<Object[]> obtenerDatosConFiltros(String rut, Integer dia, String nombreProducto, String nombreBanco);
 }

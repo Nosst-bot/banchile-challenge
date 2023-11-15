@@ -33,7 +33,7 @@ public class GlobalServiceImpl implements GlobalService{
     ProductoRepository productoRepository;
 
     @Override
-    public List<Object[]> obtenerDatosConFiltros(String rut, Integer dia, String nombreProducto, String nombreBanco) {
-        return pacRepository.obtenerDatosConFiltros(rut, dia, nombreProducto, nombreBanco);
+    public List<Object[]> obtenerDatosConFiltros(String rut, Integer dia, String nombreProducto, String nombreBanco, String nombreCliente, Long pacId) {
+        return pacRepository.obtenerDatosConFiltros(rut, dia, nombreProducto, nombreBanco, nombreCliente, pacId);
     }
 }

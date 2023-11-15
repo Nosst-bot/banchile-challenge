@@ -18,8 +18,8 @@ public class Filtro {
     private String clienteNombre;
     private String cuentaNombreBanco;
     private Long cuentaId;
-    private  String productoNombre;
+    private String productoNombre;
     private Long pacId;
     private Date pacFecha;
-    private Double pacMonto;
+//    private Double pacMonto;
 }

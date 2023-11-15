@@ -18,7 +18,9 @@ public class RestController {
     public List<Object[]> filtrarDatos(@RequestParam(required = false) String rut,
                                        @RequestParam(required = false) Integer dia,
                                        @RequestParam(required = false) String nombreProducto,
-                                       @RequestParam(required = false) String nombreBanco) {
-        return globalService.obtenerDatosConFiltros(rut, dia, nombreProducto, nombreBanco);
+                                       @RequestParam(required = false) String nombreBanco,
+                                       @RequestParam(required = false) String nombreCliente,
+                                       @RequestParam(required = false) Long pacId) {
+        return globalService.obtenerDatosConFiltros(rut, dia, nombreProducto, nombreBanco, nombreCliente, pacId);
     }
 }
