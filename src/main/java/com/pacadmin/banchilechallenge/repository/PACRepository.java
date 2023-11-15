@@ -19,7 +19,7 @@ public interface PACRepository extends JpaRepository<PAC,Long> {
             "AND (:dia IS NULL OR FUNCTION('DAY', pac.pacFecha) = :dia) " +
             "AND (:nombreProducto IS NULL OR p.productoNombre = :nombreProducto) " +
             "AND (:nombreBanco IS NULL OR c.cuentaNombreBanco = :nombreBanco) " +
-            "AND (:nombreCliente IS NULL OR cl.clienteNombre = :nombreCliente) " +
+            "AND (:nombreCliente IS NULL OR cl.clienteNombre LIKE CONCAT('%', :nombreCliente, '%')) " +
             "AND (:pacId IS NULL OR pac.pacId = :pacId)")
     Page<Object[]> obtenerDatosConFiltros(String rut, Integer dia, String nombreProducto, String nombreBanco, String nombreCliente, Long pacId, Pageable pageable);
 
