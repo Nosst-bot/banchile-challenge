@@ -9,7 +9,7 @@ import com.pacadmin.banchilechallenge.repository.PACRepository;
 import com.pacadmin.banchilechallenge.repository.ProductoRepository;
 
 @Service
-public class GlobalServiceImpl {
+public class GlobalServiceImpl implements GlobalService {
 
     @Autowired
     ClienteRepository clienteRepository;
@@ -23,5 +23,4 @@ public class GlobalServiceImpl {
     @Autowired
     ProductoRepository productoRepository;
 
-    
 }

@@ -12,5 +12,4 @@ public interface PACRepository extends JpaRepository<PAC,Long> {
 
     List<PAC> findByPacFecha(Date pacFecha);
     List<PAC> findByPacMontoBetween(Double montoInicial, Double montoFinal);
-
 }
