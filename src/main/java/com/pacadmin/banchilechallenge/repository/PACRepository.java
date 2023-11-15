@@ -22,6 +22,7 @@ public interface PACRepository extends JpaRepository<PAC,Long> {
             "AND (:nombreCliente IS NULL OR cl.clienteNombre LIKE CONCAT('%', :nombreCliente, '%')) " +
             "AND (:pacId IS NULL OR pac.pacId = :pacId) " +
             "AND (:minMonto IS NULL OR pac.pacMonto >= :minMonto) " +
-            "AND (:maxMonto IS NULL OR pac.pacMonto <= :maxMonto)")
-    Page<Object[]> obtenerDatosConFiltros(String rut, Integer dia, String nombreProducto, String nombreBanco, String nombreCliente, Long pacId, Double minMonto, Double maxMonto, Pageable pageable);
+            "AND (:maxMonto IS NULL OR pac.pacMonto <= :maxMonto) " +
+            "AND (:cuentaId IS NULL OR c.cuentaId = :cuentaId)")
+    Page<Object[]> obtenerDatosConFiltros(String rut, Integer dia, String nombreProducto, String nombreBanco, String nombreCliente, Long pacId, Double minMonto, Double maxMonto, Long cuentaId, Pageable pageable);
 }
