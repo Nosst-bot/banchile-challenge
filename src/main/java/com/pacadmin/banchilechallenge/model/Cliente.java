@@ -16,7 +16,7 @@ public class Cliente {
     @Column(name = "cliente_id")
     private Long clienteId;
 
-    @Column(name = "rut")
+    @Column(name = "rut", unique = true)
     private String clienteRut;
 
     @Column(name = "nombre")
