@@ -29,7 +29,7 @@
 
 ## Link Hacía Front-end
 
-<p><a href="https://github.com/AngelSmithlgs](https://github.com/AngelSmithlgs/BanchileHackathon">FRONTEND</a></p>
+<p><a href="https://github.com/AngelSmithlgs/BanchileHackathon">FRONTEND</a></p>
 
   
 # <h3> Participantes:</h3>
