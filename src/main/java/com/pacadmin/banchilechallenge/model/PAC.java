@@ -1,5 +1,6 @@
 package com.pacadmin.banchilechallenge.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -30,7 +31,9 @@ public class PAC {
 
     @Column(name = "fecha")
     @DateTimeFormat(pattern = "dd-MM-yyyy")
-    private Date pacFecha;
+    private LocalDate pacFecha;
+
+
 
     @Column(name = "monto")
     private Double pacMonto;
