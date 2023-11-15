@@ -31,7 +31,7 @@
 
 <p><a href="https://github.com/AngelSmithlgs/BanchileHackathon">FRONTEND</a></p>
 
-  
+
 # <h3> Participantes:</h3>
 <p><a href="https://github.com/AngelSmithlgs">Angel Smith</a></p>
 <a href="https://github.com/Rosa-Enco-Perez">Rosa Enco Perez</a></p>
