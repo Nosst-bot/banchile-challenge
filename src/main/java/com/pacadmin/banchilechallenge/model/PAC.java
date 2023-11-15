@@ -29,7 +29,7 @@ public class PAC {
     private Producto producto;
 
     @Column(name = "fecha")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date pacFecha;
 
     @Column(name = "monto")
