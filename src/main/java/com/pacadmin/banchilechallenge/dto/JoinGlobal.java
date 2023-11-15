@@ -12,8 +12,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class JoinGlobal {
-    
-    private Long clienteId;
+
     private String clienteRut;
     private String clienteNombre;
     private Long cuentaId;
@@ -21,6 +20,5 @@ public class JoinGlobal {
     private Long pacId;
     private LocalDate pacFecha;
     private Double pacMonto;
-    private Long productoId;
     private String productoNombre;
 }
