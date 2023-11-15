@@ -1,7 +1,8 @@
 package com.pacadmin.banchilechallenge.services;
 
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface GlobalService {
-    List<?> obtenerDatosConFiltros(String rut, Integer dia, String nombreProducto, String nombreBanco, String clienteNombre, Long pacId );
+    Page<?> obtenerDatosConFiltros(String rut, Integer dia, String nombreProducto, String nombreBanco, String clienteNombre, Long pacId, Pageable pageable);
 }
