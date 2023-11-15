@@ -20,7 +20,9 @@ public class RestController {
                                        @RequestParam(required = false) String nombreBanco,
                                        @RequestParam(required = false) String nombreCliente,
                                        @RequestParam(required = false) Long pacId,
+                                       @RequestParam(required = false) Double minMonto,
+                                       @RequestParam(required = false) Double maxMonto,
                                        Pageable pageable) {
-        return globalService.obtenerDatosConFiltros(rut, dia, nombreProducto, nombreBanco, nombreCliente, pacId, pageable);
+        return globalService.obtenerDatosConFiltros(rut, dia, nombreProducto, nombreBanco, nombreCliente, pacId, minMonto, maxMonto, pageable);
     }
 }

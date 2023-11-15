@@ -13,7 +13,7 @@ public class GlobalServiceImpl implements GlobalService{
     PACRepository pacRepository;
 
     @Override
-    public Page<Object[]> obtenerDatosConFiltros(String rut, Integer dia, String nombreProducto, String nombreBanco, String nombreCliente, Long pacId, Pageable pageable) {
-        return pacRepository.obtenerDatosConFiltros(rut, dia, nombreProducto, nombreBanco, nombreCliente, pacId, pageable);
+    public Page<Object[]> obtenerDatosConFiltros(String rut, Integer dia, String nombreProducto, String nombreBanco, String nombreCliente, Long pacId, Double minMonto, Double maxMonto, Pageable pageable) {
+        return pacRepository.obtenerDatosConFiltros(rut, dia, nombreProducto, nombreBanco, nombreCliente, pacId, minMonto, maxMonto, pageable);
     }
 }
