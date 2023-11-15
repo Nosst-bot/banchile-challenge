@@ -1,6 +1,8 @@
 package com.pacadmin.banchilechallenge.model;
 
 import java.util.Date;
+import java.util.List;
+
 import org.springframework.format.annotation.DateTimeFormat;
 import jakarta.persistence.*;
 import lombok.*;
@@ -22,7 +24,7 @@ public class PAC {
     @JoinColumn(name = "cuenta_id")
     private Cuenta cuenta;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "producto_id")
     private Producto producto;
 
