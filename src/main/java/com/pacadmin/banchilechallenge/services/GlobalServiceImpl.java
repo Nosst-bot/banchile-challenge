@@ -1,5 +1,6 @@
 package com.pacadmin.banchilechallenge.services;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +51,7 @@ public class GlobalServiceImpl implements GlobalService{
         if (filtro.getCuentaId() != null && filtro.getCuentaNombreBanco() != null) {
             cuentas = cuentaRepository.findByCuentaIdAndCuentaNombreBanco(filtro.getCuentaId(), filtro.getCuentaNombreBanco());
         } else if (filtro.getCuentaId() != null) {
-           /*  cuentas = cuentaRepository.findById(filtro.getCuentaId()).get(); */
+           cuentas = Arrays.asList(cuentaRepository.findById(filtro.getCuentaId()).get());
         } else if (filtro.getCuentaNombreBanco() != null) {
             cuentas = cuentaRepository.findByCuentaNombreBanco(filtro.getCuentaNombreBanco());
         } else {
@@ -60,19 +61,19 @@ public class GlobalServiceImpl implements GlobalService{
         List<PAC> pacs;
 
         if (filtro.getPacId() != null && filtro.getPacFecha() != null && filtro.getPacMonto() != null) {
-            pacs = clienteRepository.findByPacIdAndPacFechaAndPacMonto(filtro.getPacId(), filtro.getPacFecha(), filtro.getPacMonto());
+            pacs = pacRepository.findByPacIdAndPacFechaAndPacMonto(filtro.getPacId(), filtro.getPacFecha(), filtro.getPacMonto());
         } else if (filtro.getPacId() != null && filtro.getPacFecha() != null) {
-            pacs = clienteRepository.findByPacIdAndPacFecha(filtro.getPacId(), filtro.getPacFecha());
+            pacs = pacRepository.findByPacIdAndPacFecha(filtro.getPacId(), filtro.getPacFecha());
         } else if (filtro.getPacId() != null && filtro.getPacMonto() != null) {
-            pacs = clienteRepository.findByPacIdAndPacMonto(filtro.getPacId(), filtro.getPacMonto());
+            pacs = pacRepository.findByPacIdAndPacMonto(filtro.getPacId(), filtro.getPacMonto());
         } else if (filtro.getPacFecha() != null && filtro.getPacMonto() != null) {
-            pacs = clienteRepository.findByPacFechaAndPacMonto(filtro.getPacFecha(), filtro.getPacMonto());
+            pacs = pacRepository.findByPacFechaAndPacMonto(filtro.getPacFecha(), filtro.getPacMonto());
         } else if (filtro.getPacId() != null) {
-            /* pacs = clienteRepository.findById(filtro.getPacId()); */
+            pacs = Arrays.asList(pacRepository.findById(filtro.getPacId()).orElse(null));
         } else if (filtro.getPacFecha() != null) {
-            pacs = clienteRepository.findByPacFecha(filtro.getPacFecha());
+            pacs = pacRepository.findByPacFecha(filtro.getPacFecha());
         } else if (filtro.getPacMonto() != null) {
-            pacs = clienteRepository.findByPacMonto(filtro.getPacMonto());
+            pacs = pacRepository.findByPacMonto(filtro.getPacMonto());
         } else {
             pacs = pacRepository.findAll();
         }
@@ -86,8 +87,7 @@ public class GlobalServiceImpl implements GlobalService{
         }
 
         // Realiza el JOIN de las tablas y devuelve los resultados
-        /* return joinTablas(clientes, cuentas, pacs, productos); */
-        return null;
+        return joinTablas(clientes, cuentas, pacs, productos);
     }
 
     private List<JoinGlobal> joinTablas(List<Cliente> clientes, List<Cuenta> cuentas, List<PAC> pacs, List<Producto> productos) {
