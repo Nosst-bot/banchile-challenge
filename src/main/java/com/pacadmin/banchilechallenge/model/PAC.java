@@ -33,8 +33,6 @@ public class PAC {
     @DateTimeFormat(pattern = "dd-MM-yyyy")
     private LocalDate pacFecha;
 
-
-
     @Column(name = "monto")
     private Double pacMonto;
 }
