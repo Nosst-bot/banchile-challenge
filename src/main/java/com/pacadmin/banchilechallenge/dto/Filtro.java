@@ -1,6 +1,8 @@
 package com.pacadmin.banchilechallenge.dto;
 
 
+import java.util.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,14 +14,12 @@ import lombok.Setter;
 @Setter
 public class Filtro {
 
-
-    private String rut;
-
-    private String nombreProducto;
-
-    private String diaPago;
-
-    private String banco;
-
-
+    private String clienteRut;
+    private String clienteNombre;
+    private String cuentaNombreBanco;
+    private Long cuentaId;
+    private  String productoNombre;
+    private Long pacId;
+    private Date pacFecha;
+    private Double pacMonto;
 }
