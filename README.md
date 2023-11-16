@@ -27,7 +27,7 @@
 | react-switch                           | v7.0.0    |
 | xlsx                                   | v0.18.5   |
 
-## Link Hacía Front-end
+## Link Hacía Front-end 🎨
 
 <p><a href="https://github.com/AngelSmithlgs/BanchileHackathon">FRONTEND</a></p>
 
